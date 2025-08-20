@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Apexcify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+  <script defer src="/frontend/js/api.js"></script>
+  <script defer src="/frontend/js/checkout.js"></script>
+</head>
+<body class="min-h-screen bg-base-100">
+  <div class="navbar bg-base-100 shadow">
+    <a href="/" class="btn btn-ghost text-xl font-bold">🛍️ Apexcify</a>
+  </div>
+  <main class="container mx-auto p-6 max-w-2xl">
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Checkout</h2>
+        <label class="form-control w-full">
+          <div class="label"><span class="label-text">Shipping Address</span></div>
+          <textarea id="address" class="textarea textarea-bordered" placeholder="Street, City, Country"></textarea>
+        </label>
+        <button id="placeOrder" class="btn btn-primary mt-4 w-full">Place Order</button>
+        <div id="result" class="alert mt-4 hidden"></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

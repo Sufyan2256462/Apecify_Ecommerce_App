@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apexcify — Multi‑Vendor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    .glass { background: rgba(255,255,255,.6); backdrop-filter: blur(8px); }
+  </style>
+  <script defer src="/frontend/js/api.js"></script>
+  <script defer src="/frontend/js/shop.js"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-base-200 to-base-100">
+  <header class="navbar sticky top-0 z-20 glass shadow">
+    <div class="flex-1">
+      <a href="/" class="btn btn-ghost text-xl font-bold">🛍️ Apexcify</a>
+    </div>
+    <div class="flex-none gap-2">
+      <a href="/frontend/pages/vendor.html" class="btn btn-ghost hidden sm:inline-flex">Vendor</a>
+      <a href="/frontend/pages/admin.html" class="btn btn-ghost hidden sm:inline-flex">Admin</a>
+      <a href="/frontend/pages/cart.html" class="btn btn-ghost">Cart <span id="cartCount" class="badge badge-primary ml-1">0</span></a>
+      <a href="/frontend/pages/login.html" class="btn btn-primary">Sign in</a>
+    </div>
+  </header>
+
+  <section class="hero min-h-[60vh]" style="background-image:url('https://images.unsplash.com/photo-1520975867597-0f1a8f6f5b9f?q=80&w=1800');">
+    <div class="hero-overlay bg-opacity-70"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-2xl">
+        <h1 class="mb-5 text-5xl font-extrabold leading-tight">Find your next favorite thing</h1>
+        <p class="mb-6 opacity-90">Curated products from multiple vendors. Clean design, smooth UX, and fast checkout.</p>
+        <a href="#products" class="btn btn-primary btn-lg">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto p-6" id="products">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+      <h2 class="text-2xl sm:text-3xl font-bold">Latest Arrivals</h2>
+      <div class="join w-full sm:w-auto">
+        <input id="search" type="text" class="input input-bordered join-item w-full sm:w-64" placeholder="Search products">
+        <select id="tag" class="select select-bordered join-item">
+          <option value="">All</option>
+          <option value="new">New</option>
+          <option value="trending">Trending</option>
+        </select>
+      </div>
+    </div>
+    <div id="productGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+  </main>
+
+  <footer class="mt-12 p-8 text-center text-sm opacity-70">© 2025 Apexcify — Built with ❤️</footer>
+</body>
+</html>

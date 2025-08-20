@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Apexcify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+  <script defer src="/frontend/js/api.js"></script>
+  <script defer src="/frontend/js/admin.js"></script>
+</head>
+<body class="min-h-screen bg-base-100">
+  <div class="navbar bg-base-100 shadow">
+    <a href="/" class="btn btn-ghost text-xl font-bold">🛍️ Apexcify Admin</a>
+    <button id="logout" class="ml-auto btn btn-ghost">Logout</button>
+  </div>
+  <main class="container mx-auto p-6">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="stat shadow"><div class="stat-title">Users</div><div id="u" class="stat-value">0</div></div>
+      <div class="stat shadow"><div class="stat-title">Products</div><div id="p" class="stat-value">0</div></div>
+      <div class="stat shadow"><div class="stat-title">Orders</div><div id="o" class="stat-value">0</div></div>
+    </div>
+    <h3 class="mt-8 mb-2 text-xl font-semibold">All Orders</h3>
+    <div id="orders" class="overflow-x-auto"></div>
+  </main>
+</body>
+</html>
