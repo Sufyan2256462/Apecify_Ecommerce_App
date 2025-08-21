@@ -181,4 +181,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email support@mvecom.com or join our Slack channel.
+For support, email sufianliaqat4422@gmail.com or join our Slack channel.
